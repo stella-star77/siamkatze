@@ -1,3 +1,14 @@
+
 body{
-    background-color: rgb(129, 174, 222);
+    
+    background-color: rgb(104, 127, 222);
+
+}
+
+body{
+    color:rgb(20, 4, 53);
+}
+.container{max-width:900px;
+    margin:0 auto;
+
 }
