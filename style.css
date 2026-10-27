@@ -4,8 +4,8 @@ box-sizing: border-box;
 }
 
 body{
-    color: white;
-    background: rgb(24, 6, 59);
+    color: rgb(78, 54, 3);
+    background: rgb(234, 224, 162);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     line-height: 1.5;
@@ -33,21 +33,21 @@ body{
 }
 
 .nav-link:hover{
-    background: rgb(45, 15, 106);
+    background: rgb(156, 147, 60);
 }
 
 .nav-link:focus{
-    outline: 2px solid black;
+    outline: 2px solid rgb(15, 0, 0);
     outline-offset: 2px;
 }
 
 .site-header{
     padding: 16px 0;
-    border-bottom: 1px solid rgb(174, 166, 166);
+    border-bottom: 1px solid rgb(17, 1, 1);
 }
 
 .site-nav{
-    border-bottom: 1px solid rgb(174, 166, 166);
+    border-bottom: 1px solid rgb(25, 1, 1);
 }
 
 .site-main{
@@ -56,7 +56,7 @@ body{
 
 .site-footer{
     padding: 16px 0;
-    border-top: 1px solid rgb(174, 166, 166);
+    border-top: 1px solid rgb(4, 0, 0);
 }
 
 .section{
@@ -107,10 +107,10 @@ p{
 }
 
 .hero-card{
-    border: 1px solid rgb(126, 203, 254);
+    border: 1px solid rgb(2, 18, 29);
     border-radius: 12px;
     padding: 12px;
-    background:rgba(0, 106, 255, 0.521);
+    background:rgba(231, 94, 137, 0.521);
     margin-top: 20px;
 }
 
