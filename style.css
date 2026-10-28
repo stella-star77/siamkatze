@@ -37,7 +37,7 @@ body{
 }
 
 .nav-link:focus{
-    outline: 2px solid rgb(15, 0, 0);
+    outline: 2px solid rgb(12, 0, 0);
     outline-offset: 2px;
 }
 
@@ -83,7 +83,7 @@ p{
 }
 
 .card{
-    border: 1px solid rgb(174, 166, 166);
+    border: 1px solid rgb(15, 0, 0);
     border-radius: 12px;
     padding: 12px;
 }
@@ -110,7 +110,7 @@ p{
     border: 1px solid rgb(2, 18, 29);
     border-radius: 12px;
     padding: 12px;
-    background:rgba(231, 94, 137, 0.521);
+    background:rgba(230, 81, 128, 0.521);
     margin-top: 20px;
 }
 
