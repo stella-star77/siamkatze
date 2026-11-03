@@ -1,13 +1,21 @@
 console.log("JavaScript läuft")
-const button = document.getElementById("katzenButton");
-const katze = document.getElementById("springKatze");
+const emojis = [ "🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
 
-button.addEventListener("click", function() {
+    for (let i = 0; i < 35; i++) {
 
-    katze.classList.remove("springen");
+        const emoji = document.createElement("span");
 
-    void katze.offsetWidth;
+        emoji.classList.add("schwebe-emoji");
 
-    katze.classList.add("springen");
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-});
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (2 + Math.random() * 2) + "s";
+        emoji.style.fontSize = (20 + Math.random() * 25) + "px";
+
+        container.appendChild(emoji);
+
+        emoji.addEventListener("animationend", function() {
+            emoji.remove();
+        });
+    }
