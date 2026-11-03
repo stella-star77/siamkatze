@@ -124,3 +124,25 @@ p{
         align-items: start;
     }
 }
+#bilder {
+    text-align: center;
+}
+
+#bilder {
+    text-align: center;
+    width: 100%;
+}
+
+#bilder img {
+    width: 400px;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 0;
+}
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
