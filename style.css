@@ -124,10 +124,8 @@ p{
         align-items: start;
     }
 }
-#bilder {
-    text-align: center;
-}
 
+/* Bildergalerie */
 #bilder {
     text-align: center;
     width: 100%;
@@ -140,9 +138,62 @@ p{
     margin: 10px;
     border-radius: 0;
 }
-img {
+
+/* Normale Bilder */
+.card img {
     width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* Katzen-Emoji */
+.katzen-button {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Springende Katze */
+#springKatze {
+    position: fixed;
+    width: 300px;
+    height: auto;
+    bottom: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Animation */
+#springKatze.springen {
+    animation: katzeSpringt 3s ease-in-out forwards;
+}
+
+@keyframes katzeSpringt {
+    0% {
+        bottom: -400px;
+        transform: translateX(-50%) scale(0.5);
+        opacity: 0;
+    }
+
+    30% {
+        bottom: 25%;
+        transform: translateX(-50%) scale(1.2);
+        opacity: 1;
+    }
+
+    60% {
+        bottom: 25%;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -400px;
+        transform: translateX(-50%) scale(0.5);
+        opacity: 0;
+    }
 }
