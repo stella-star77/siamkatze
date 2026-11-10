@@ -1,5 +1,11 @@
 console.log("JavaScript läuft")
-const emojis = [ "🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
+<script>
+const button = document.getElementById("katzenButton");
+const container = document.getElementById("emojiContainer");
+
+button.addEventListener("click", function() {
+
+    const emojis = ["🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
 
     for (let i = 0; i < 35; i++) {
 
@@ -7,7 +13,9 @@ const emojis = [ "🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
 
         emoji.classList.add("schwebe-emoji");
 
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.textContent = emojis[
+            Math.floor(Math.random() * emojis.length)
+        ];
 
         emoji.style.left = Math.random() * 100 + "vw";
         emoji.style.animationDuration = (2 + Math.random() * 2) + "s";
@@ -19,3 +27,6 @@ const emojis = [ "🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
             emoji.remove();
         });
     }
+
+});
+</script>

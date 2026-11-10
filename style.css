@@ -122,10 +122,16 @@ p{
     z-index: 9999;
 }
 
+.katzen-button {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .schwebe-emoji {
     position: absolute;
     bottom: -50px;
-    font-size: 30px;
     animation: schweben 3s ease-out forwards;
 }
 

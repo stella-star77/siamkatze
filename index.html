@@ -11,7 +11,39 @@
 </head>
 
 <body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
 
+    const button = document.getElementById("katzenButton");
+    const container = document.getElementById("emojiContainer");
+
+    button.addEventListener("click", function() {
+
+        const emojis = ["🐈‍⬛", "💕", "💗", "💖", "❤️", "🐾"];
+
+        for (let i = 0; i < 35; i++) {
+
+            const emoji = document.createElement("span");
+
+            emoji.classList.add("schwebe-emoji");
+
+            emoji.textContent = emojis[
+                Math.floor(Math.random() * emojis.length)
+            ];
+
+            emoji.style.left = Math.random() * 100 + "vw";
+            emoji.style.animationDuration = (2 + Math.random() * 2) + "s";
+            emoji.style.fontSize = (20 + Math.random() * 25) + "px";
+
+            container.appendChild(emoji);
+
+            emoji.addEventListener("animationend", function() {
+                emoji.remove();
+            });
+        }
+    });
+});
+</script>
     <header class="site-header">
         <div class="container">
             <div class="brand">Ideenwerkstatt</div>
@@ -34,9 +66,7 @@
                   <h1>
                     
    <h1>
-    <button id="katzenButton" class="katzen-button">
-        🐈‍⬛
-    </button>
+    <button id="katzenButton" class="katzen-button">🐈‍⬛</button>
     SIAMKATZE 🐾 - Elegante Jägerin
 </h1>
 
