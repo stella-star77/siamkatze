@@ -146,3 +146,110 @@ p{
         opacity: 0;
     }
 }
+/* ALLE BILDER DER WEBSITE */
+img {
+    width: 350px !important;
+    max-width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+
+    display: block;
+    margin: 20px auto;
+
+    border: 5px solid #daa520 !important;
+    border-radius: 0 !important;
+
+    box-shadow:
+        0 0 8px #daa520,
+        0 0 15px #ffd700,
+        0 0 25px #fff2a6;
+
+    animation: goldGlitzer 2s infinite alternate;
+}
+
+/* GOLDENER GLITZER */
+@keyframes goldGlitzer {
+    0% {
+        box-shadow:
+            0 0 5px #daa520,
+            0 0 10px #ffd700;
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px #fff2a6,
+            0 0 25px #ffd700,
+            0 0 35px #daa520;
+    }
+
+    100% {
+        box-shadow:
+            0 0 8px #daa520,
+            0 0 20px #ffd700;
+    }
+}
+/* ROSA KATZENPFOTEN */
+
+.paw-print {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    z-index: 9998;
+    pointer-events: none;
+    animation: pfotenErscheinen 1.8s ease-out forwards;
+}
+
+.paw-toe {
+    position: absolute;
+    width: 7px;
+    height: 8px;
+    background: #f28caf;
+    border-radius: 50%;
+}
+
+.paw-toe:nth-child(1) {
+    left: 2px;
+    top: 5px;
+}
+
+.paw-toe:nth-child(2) {
+    left: 9px;
+    top: 1px;
+}
+
+.paw-toe:nth-child(3) {
+    left: 16px;
+    top: 5px;
+}
+
+.paw-toe:nth-child(4) {
+    left: 20px;
+    top: 12px;
+}
+
+.paw-pad {
+    position: absolute;
+    width: 13px;
+    height: 11px;
+    background: #f28caf;
+    border-radius: 50% 50% 45% 45%;
+    left: 7px;
+    top: 12px;
+}
+
+@keyframes pfotenErscheinen {
+    0% {
+        opacity: 0;
+        transform: rotate(var(--rotation)) scale(0.3);
+    }
+
+    30% {
+        opacity: 1;
+        transform: rotate(var(--rotation)) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(var(--rotation)) scale(0.8);
+    }
+}
