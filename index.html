@@ -10,6 +10,8 @@
 
 <body>
 
+    </div>
+
     <header class="site-header">
         <div class="container">
             <div class="brand">Ideenwerkstatt</div>
@@ -32,11 +34,10 @@
             <section id="leadtext" class="section">
                 <div class="hero-text">
 
-                    <h1>
-                        <button id="katzenButton" class="katzen-button">🐈‍⬛</button>
-                        SIAMKATZE 🐾 - Elegante Jägerin
-                    </h1>
-
+                    <h1 id="quizTitel">
+    <button id="katzenButton" class="katzen-button">🐈‍⬛</button>
+    SIAMKATZE 🐾 - Elegante Jägerin
+</h1>
                     <div id="emojiContainer"></div>
 
                     <p>Auf dieser Website erfährst du spannende Informationen zu den Siamkatzen</p>
@@ -100,6 +101,32 @@
     </footer>
 
     <script src="script.js"></script>
+ <div id="quizFenster" class="quiz-fenster">
+        <div class="quiz-inhalt">
+
+            <button id="quizSchliessen" class="quiz-schliessen">✖</button>
+
+            <h2>🐾 Siamkatzen-Quiz</h2>
+
+            <p id="quizFrage"></p>
+            <div id="quizAntworten"></div>
+            <p id="quizRueckmeldung"></p>
+
+            <button id="quizWeiter">Weiter →</button>
+
+            <p id="quizPunkte"></p>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
 
 </body>
 </html>

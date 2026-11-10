@@ -5,7 +5,7 @@
 
 body {
     color: rgb(78, 54, 3);
-    background: rgb(234, 224, 162);
+    background: rgb(230, 216, 171);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     line-height: 1.5;
@@ -233,4 +233,128 @@ img {
         grid-template-columns: 1.3fr 1fr;
         align-items: start;
     }
+}
+#springKatze {
+    position: fixed;
+    bottom: -100vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 75vh;
+    line-height: 1;
+
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.quiz-fenster {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(50, 30, 30, 0.7);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-inhalt {
+    background: rgb(255, 239, 225);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: rgb(78, 54, 3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: quizErscheinen 0.4s ease;
+}
+
+/* Quiz erscheint */
+
+@keyframes quizErscheinen {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Schließen-Button */
+
+.quiz-schliessen {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(78, 54, 3);
+}
+
+/* Antwort-Buttons */
+
+.quiz-antwort {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background: rgb(234, 200, 205);
+    color: rgb(78, 54, 3);
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.quiz-antwort:hover:not(:disabled) {
+    background: rgb(220, 160, 175);
+    transform: scale(1.03);
+}
+
+.quiz-antwort:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* Weiter-Button */
+
+#quizWeiter {
+    display: none;
+    background: rgb(201, 119, 136);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#quizWeiter:hover {
+    transform: scale(1.05);
+}
+
+/* Rückmeldung */
+
+#quizRueckmeldung {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Punktestand */
+
+#quizPunkte {
+    font-weight: bold;
+    margin-top: 20px;
 }
