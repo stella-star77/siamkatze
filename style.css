@@ -1,23 +1,25 @@
 
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body{
+body {
     color: rgb(78, 54, 3);
     background: rgb(234, 224, 162);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     line-height: 1.5;
 }
 
-.container{
+.container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 16px;
 }
 
-.nav-list{
+/* NAVIGATION */
+
+.nav-list {
     list-style: none;
     display: flex;
     gap: 12px;
@@ -25,94 +27,101 @@ body{
     padding: 10px 16px;
 }
 
-.nav-link{
+.nav-link {
     text-decoration: none;
     color: inherit;
     padding: 6px 10px;
     border-radius: 8px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     background: rgb(201, 119, 136);
 }
 
-.nav-link:focus{
+.nav-link:focus {
     outline: 2px solid rgb(12, 0, 0);
     outline-offset: 2px;
 }
 
-.site-header{
+/* HEADER UND FOOTER */
+
+.site-header {
     padding: 16px 0;
     border-bottom: 1px solid rgb(17, 1, 1);
 }
 
-.site-nav{
+.site-nav {
     border-bottom: 1px solid rgb(25, 1, 1);
 }
 
-.site-main{
-    padding:24px 0;
+.site-main {
+    padding: 24px 0;
 }
 
-.site-footer{
+.site-footer {
     padding: 16px 0;
     border-top: 1px solid rgb(4, 0, 0);
 }
 
-.section{
-    padding: 18px 0
+.brand {
+    font-weight: 700;
 }
 
-.brand{
-    font-weight:700;
-}
+/* ÜBERSCHRIFTEN */
 
-h1, h2, h3{
+h1, h2, h3 {
     line-height: 1.2;
     margin: 0 0 8px 0;
 }
 
-p{
+p {
     margin: 0;
 }
 
-.cards{
+.section {
+    padding: 18px 0;
+}
+
+/* KARTEN */
+
+.cards {
     display: grid;
     gap: 12px;
     margin-top: 12px;
 }
 
-.card{
+.card {
     border: 1px solid rgb(15, 0, 0);
     border-radius: 12px;
     padding: 12px;
 }
 
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+/* HERO-BEREICH */
 
-.responsive-img2 {
-    max-width: 50%;
-    height: auto;
-    display: block; 
-}
-
-.hero{
+.hero {
     display: grid;
     gap: 12px;
     margin-top: 12px;
 }
 
-.hero-card{
+.hero-card {
     border: 1px solid rgb(2, 18, 29);
     border-radius: 12px;
     padding: 12px;
-    background:rgba(230, 81, 128, 0.521);
+    background: rgba(230, 81, 128, 0.521);
     margin-top: 20px;
 }
+
+/* KATZENBUTTON */
+
+.katzen-button {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* EMOJI-ANIMATION */
 
 #emojiContainer {
     position: fixed;
@@ -122,16 +131,10 @@ p{
     z-index: 9999;
 }
 
-.katzen-button {
-    font-size: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .schwebe-emoji {
     position: absolute;
     bottom: -50px;
+    font-size: 30px;
     animation: schweben 3s ease-out forwards;
 }
 
@@ -146,18 +149,34 @@ p{
         opacity: 0;
     }
 }
+
+/* BILDER */
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.responsive-img2 {
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
 /* ALLE BILDER DER WEBSITE */
+
 img {
-    width: 350px !important;
-    max-width: 100% !important;
-    height: 200px !important;
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
     object-fit: cover;
 
     display: block;
     margin: 20px auto;
 
-    border: 5px solid #daa520 !important;
-    border-radius: 0 !important;
+    border: 5px solid #daa520;
+    border-radius: 0;
 
     box-shadow:
         0 0 8px #daa520,
@@ -168,6 +187,7 @@ img {
 }
 
 /* GOLDENER GLITZER */
+
 @keyframes goldGlitzer {
     0% {
         box-shadow:
@@ -188,68 +208,29 @@ img {
             0 0 20px #ffd700;
     }
 }
-/* ROSA KATZENPFOTEN */
 
-.paw-print {
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    z-index: 9998;
-    pointer-events: none;
-    animation: pfotenErscheinen 1.8s ease-out forwards;
+/* BILDERGALERIE */
+
+#bilder {
+    text-align: center;
 }
 
-.paw-toe {
-    position: absolute;
-    width: 7px;
-    height: 8px;
-    background: #f28caf;
-    border-radius: 50%;
+#bilder img {
+    width: 100%;
+    max-width: 700px;
+    height: 250px;
+    object-fit: cover;
 }
 
-.paw-toe:nth-child(1) {
-    left: 2px;
-    top: 5px;
-}
+/* GRÖSSERE BILDSCHIRME */
 
-.paw-toe:nth-child(2) {
-    left: 9px;
-    top: 1px;
-}
-
-.paw-toe:nth-child(3) {
-    left: 16px;
-    top: 5px;
-}
-
-.paw-toe:nth-child(4) {
-    left: 20px;
-    top: 12px;
-}
-
-.paw-pad {
-    position: absolute;
-    width: 13px;
-    height: 11px;
-    background: #f28caf;
-    border-radius: 50% 50% 45% 45%;
-    left: 7px;
-    top: 12px;
-}
-
-@keyframes pfotenErscheinen {
-    0% {
-        opacity: 0;
-        transform: rotate(var(--rotation)) scale(0.3);
+@media (min-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    30% {
-        opacity: 1;
-        transform: rotate(var(--rotation)) scale(1.2);
-    }
-
-    100% {
-        opacity: 0;
-        transform: rotate(var(--rotation)) scale(0.8);
+    .hero {
+        grid-template-columns: 1.3fr 1fr;
+        align-items: start;
     }
 }
